@@ -1,0 +1,62 @@
+'$schema': https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/assets/schemas/v1/metadata.schema.json
+
+name: Button
+status: experimental
+description: 'A reusable button component with multiple variants and states.'
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Button text
+      description: 'The text displayed on the button'
+      default: 'Click here'
+    url:
+      type: string
+      title: Button URL
+      description: 'The URL the button links to'
+      format: uri
+    variant:
+      type: string
+      title: Button variant
+      description: 'The visual style of the button'
+      enum:
+        - primary
+        - secondary
+        - outline
+        - ghost
+      default: primary
+    size:
+      type: string
+      title: Button size
+      description: 'The size of the button'
+      enum:
+        - small
+        - medium
+        - large
+      default: medium
+    disabled:
+      type: boolean
+      title: Disabled state
+      description: 'Whether the button is disabled'
+      default: false
+    icon:
+      type: string
+      title: Icon
+      description: 'Optional icon name to display with the button'
+    icon_position:
+      type: string
+      title: Icon position
+      description: 'Position of the icon relative to text'
+      enum:
+        - before
+        - after
+      default: before
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - ridd/button
+slots:
+  content:
+    title: Button content
+    description: 'Alternative slot for complex button content'

@@ -1,0 +1,34 @@
+{%
+  set classes = [
+    'ridd-btn',
+    'ridd-btn--' ~ variant,
+    'ridd-btn--' ~ size,
+    disabled ? 'ridd-btn--disabled',
+  ]
+%}
+
+{% if url and not disabled %}
+  <a href="{{ url }}" {{ attributes.addClass(classes) }}>
+{% else %}
+  <button {{ attributes.addClass(classes) }}{{ disabled ? ' disabled' }}>
+{% endif %}
+  
+  {% if icon and icon_position == 'before' %}
+    <span class="ridd-btn__icon ridd-btn__icon--before">{{ icon }}</span>
+  {% endif %}
+  
+  {% if slots.content %}
+    {{ slots.content }}
+  {% else %}
+    <span class="ridd-btn__text">{{ text }}</span>
+  {% endif %}
+  
+  {% if icon and icon_position == 'after' %}
+    <span class="ridd-btn__icon ridd-btn__icon--after">{{ icon }}</span>
+  {% endif %}
+
+{% if url and not disabled %}
+  </a>
+{% else %}
+  </button>
+{% endif %}

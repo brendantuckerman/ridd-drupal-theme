@@ -1,0 +1,16 @@
+/* Sets global css rules for Ridd them */
+
+:root {
+
+  /* colours */
+  /* primary */
+  --color-primary: #CAB1BD;
+  --color-primary-dark: #ebadcb;
+  --color-primary-light: #E7CFCD;
+  --color-secondary: #9F9AA4;
+  --color-secondary-light: #CFD8D7;
+  --color-secondar-dark: #B5C9C3;
+  --color-highlight: #e4e685;
+  --color-secondary-darker: #8b888f;
+  --color-secondary-lighter: #e9e9e9;
+}

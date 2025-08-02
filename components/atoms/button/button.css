@@ -1,7 +1,7 @@
 @layer components{
 
-   /* All buttons */
-  .button {
+   /* All ridd-btns */
+  .ridd-btn {
     padding: 16px 24px;
     position: relative;
     background-color: transparent;
@@ -14,8 +14,8 @@
     }  
   }
 
-  /* Primary button - black on white */
-  .button-primary {
+  /* Primary ridd-btn - black on white */
+  .ridd-btn--primary {
     border: 4px solid black;
 
     &:after {
@@ -48,8 +48,8 @@
     }
 
   }
-  /* Secondary button - white */
-  .button-secondary {
+  /* Secondary ridd-btn - white */
+  .ridd-btn-secondary {
     border: 4px solid white;
 
     span {
