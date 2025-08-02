@@ -1,0 +1,8 @@
+global-styling:
+  version: 1.0.1
+  header: true
+  css:
+  theme:
+    dist/style.css: {}
+  js:
+    dist/main.js: {}

@@ -1,0 +1,142 @@
+/* Styling for image on large cards
+
+All shapes except round
+
+*/
+.quarter-image-container,
+.large-card-top-right-circle,
+.large-card-top-left-circle,
+.large-card-bottom-left-circle,
+.large-card-bottom-right-circle {
+  height: 225px;
+  width: 275px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10; /* Changed from 100 to 1, creates stacking context */
+}
+
+.quarter-image-container-internal,
+.large-card-top-right-circle-internal,
+.large-card-top-left-circle-internal,
+.large-card-bottom-left-circle-internal,
+.large-card-bottom-right-circle-internal
+{
+  content: '';
+  position: absolute;
+  height: 225px;
+  width: 275px;
+  @apply bg-secondary-dark;
+  z-index: 5;
+}
+
+.large-card-circle {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.large-card-circle-internal {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @apply bg-secondary-dark;
+  z-index: 5;
+  left: 10px;
+  top: 0;
+
+}
+
+.quarter-image-container{
+    background-image: url(../images/theme-logo.webp);
+}
+
+.quarter-image-container,
+.large-card-top-left-circle,
+.large-card-top-left-circle-internal {
+  border-radius: 300px 0 0 0;
+}
+
+.large-card-top-left-circle,
+.large-card-bottom-left-circle {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);;
+}
+
+.large-card-top-right-circle,
+.large-card-bottom-right-circle {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);;
+}
+
+
+
+.large-card-top-left-circle-internal {
+  bottom: 5%;
+  right: 3%;
+}
+
+.large-card-bottom-right-circle,
+.large-card-bottom-right-circle-internal {
+  border-radius: 0 0 300px 0;
+}
+
+.large-card-bottom-right-circle-internal {
+  top: 5%;
+  left: 3%;
+}
+
+.large-card-bottom-left-circle, 
+.large-card-bottom-left-circle-internal {
+  border-radius: 0 0 0 300px;
+}
+
+.large-card-bottom-left-circle-internal {
+  top: 5%;
+  right: 3%;
+}
+
+.large-card-top-right-circle,
+.large-card-top-right-circle-internal {
+  border-radius: 0 300px 0 0;
+}
+
+.large-card-top-right-circle-internal {
+  bottom: 5%;
+  left: 3%;
+}
+
+@media (min-width:640px) and (max-width:1200px){
+    .quarter-image-container{
+        display: none;
+    }
+}
+
+@media (min-width:1200px){
+   .quarter-image-container,
+   .large-card-top-left-circle {
+      height: 300px;
+      width: 600px;
+      border-radius: 600px 0 0 0;
+   }
+}
+
+.large-card-background,
+.large-card-top-right-circle,
+.large-card-top-left-circle,
+.large-card-bottom-left-circle,
+.large-card-bottom-right-circle
+ {
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /* Small card image */
+
+  .small-image-card-image-wrapper {
+    img {
+      @apply w-full h-full max-h-[320px] rounded object-cover;
+    }
+  }

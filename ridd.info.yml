@@ -1,0 +1,30 @@
+name: 'Ridd'
+type: theme
+version: 1.0.0
+description: 'An accessible Drupal 11 theme built for Ridd Psychology using Tailwind'
+core_version_requirement: '>=11.0.8'
+libraries:
+ - ridd/global-styling
+ - ridd/gloabl-scripts
+base theme: stable9
+php: 8.3.13
+logo: images/theme-branding.svg
+screenshot: images/theme-logo.jpg
+
+regions:
+  #...
+  messages: "Message area"
+  header: Header
+  breadcrumb: Breadcrumb
+  help: Help
+  hero: Hero
+  content: "Main Content"
+  sidebar_first: "Sidebar first"
+  sidebar_secondary: "Sidebar secondary"
+  footer: Footer
+  subFooter: "Sub Footer"
+  disabled: "Disabled"
+
+#ckeditor5-stylesheets:
+#  -css/...
+

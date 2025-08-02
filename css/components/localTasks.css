@@ -1,0 +1,17 @@
+/* CSS for Ridd local styling block */
+/* This is the edit, view, delete etc options */
+/* visible when logged in */
+
+#block-ridd-primary-local-tasks{
+    ul {
+        @apply flex p-4;
+        li{
+            @apply flex flex-col gap-4 p-4;
+            a{
+                @apply underline;
+            }
+        }
+
+    }
+}
+

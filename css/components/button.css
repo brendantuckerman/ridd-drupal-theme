@@ -1,0 +1,70 @@
+@layer components{
+
+   /* All buttons */
+  .button {
+    padding: 16px 24px;
+    position: relative;
+    background-color: transparent;
+
+    span {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }  
+  }
+
+  /* Primary button - black on white */
+  .button-primary {
+    border: 4px solid black;
+
+    &:after {
+     @apply bg-secondary-light;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 100%;
+      width: 100%;
+      content: "";
+      z-index: -1;
+      transition: transform 0.2s ease-in, width 0.2s ease-out 0.2s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      span {
+        @apply text-white;
+      }
+      &:after {
+        transform: translate(-10px, -10px);
+        width: calc(100% - 10px);
+      }
+    }
+
+    &:active {
+      &:after {
+        width: 100%;
+      }
+    }
+
+  }
+  /* Secondary button - white */
+  .button-secondary {
+    border: 4px solid white;
+
+    span {
+      @apply text-white;
+    }
+
+    &:hover {
+      border: 4px solid black;
+      cursor: pointer;
+      span {
+        @apply text-black;
+      }
+    }
+      
+  }
+}
+
+

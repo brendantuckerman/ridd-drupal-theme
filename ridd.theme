@@ -1,0 +1,42 @@
+
+<?php
+
+/**
+ * @file
+ * ridd.theme
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+
+function ridd_preprocess_paragraph(&$variables) {
+
+  if($variables["paragraph"]->field_large_card_image){
+
+  $media_id = $variables["paragraph"]->field_large_card_image->target_id;
+  $media_entity = Media::load($media_id);
+  $file_id = $media_entity->getSource()->getSourceFieldValue($media_entity);
+  $bg_file = File::load($file_id);
+  $path = $bg_file->createFileUrl();
+  $variables['bg_image'] = $path;
+  }
+}
+
+# Make is_front available for page title #
+
+function ridd_preprocess_page_title(&$variables) {
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}
+
+// Ensure special paths have page.html.twig available
+function ridd_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+  $path = \Drupal::service('path.current')->getPath();
+  
+  // For specific paths
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  if ($alias == '/about') {
+    $suggestions[] = 'node__custom_about';
+  }
+  
+}
