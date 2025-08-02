@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Heading
+description: A simple heading.
+props:
+  type: object
+  properties:
+    level:
+      title: Heading level
+      type: integer
+      minimum: 1
+      maximum: 6
+
+slots:
+  heading_text:
+    title: Text
+    required: true

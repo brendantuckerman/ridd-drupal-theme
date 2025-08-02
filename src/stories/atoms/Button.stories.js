@@ -1,56 +1,98 @@
 
 import '../../../components/atoms/button/button.css';
+import '../../../css/style.css';
+
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Ridd/Button',
+  title: 'Ridd/Atoms/Button',
   tags: ['autodocs'],
-  render: ({ text }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    return `<button class="ridd-btn"></button>`;
-  },
   argTypes: {
-    text: { control: 'text'},
-    url:  { control: 'text'},
-    variant: { 
-      control: {type: 'select'},
-      options: ['primary', 'secondary']
-
+    text: {
+      control: 'text',
+      description: 'Button text content'
     },
-    disabled: { control: 'bool'},
+    variant: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary' ],
+      description: 'Button style variant'
+    },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
+      description: 'Button size'
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Disabled state'
+    },
+    url: {
+      control: 'text',
+      description: 'Button link URL'
+    }
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+const Template = ({ text, variant, size, disabled, url }) => {
+  const classes = [
+    'ridd-btn',
+    `ridd-btn--${variant}`,
+    `ridd-btn--${size}`,
+    disabled ? 'ridd-btn--disabled' : ''
+  ].filter(Boolean).join(' ');
+
+  if (url && !disabled) {
+    return `<a href="${url}" class="${classes}">${text}</a>`;
+  } else {
+    return `<button class="${classes}" ${disabled ? 'disabled' : ''}><span>${text}</span></button>`;
+  }
 };
 
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
+// Default story with default args
+export const Default = Template.bind({});
+Default.args = {
+  text: 'Button',
+  variant: 'primary',
+  size: 'medium',
+  disabled: false,
+  url: ''
 };
 
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
+// Other variations
+export const Secondary = Template.bind({});
+Secondary.args = {
+  ...Default.args,
+  text: 'Secondary Button',
+  variant: 'secondary'
 };
 
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+export const Large = Template.bind({});
+Large.args = {
+  ...Default.args,
+  text: 'Large Button',
+  size: 'large'
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  ...Default.args,
+  text: 'Medium Button',
+  size: 'medium'
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  ...Default.args,
+  text: 'Small Button',
+  size: 'small'
+};
+
+export const AsLink = Template.bind({});
+AsLink.args = {
+  ...Default.args,
+  text: 'Link Button',
+  url: 'https://example.com'
 };

@@ -1,0 +1,16 @@
+
+{%
+  set classes = [
+    'link',
+    'link--external',
+    attributes.class ? attributes.class
+  ]
+%}
+
+<a href="{{ link_url }} {{ attributes }}">
+  {% if link_text %}
+    {{ link_text }}
+  {% else %}
+    {{ link_url }}
+  {% endif %}
+</a>

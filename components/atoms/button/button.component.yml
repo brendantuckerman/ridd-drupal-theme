@@ -23,8 +23,6 @@ props:
       enum:
         - primary
         - secondary
-        - outline
-        - ghost
       default: primary
     size:
       type: string

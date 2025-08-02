@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: "Link"
+description: A simple link for use in text.
+props:
+  type: object
+  properties:
+    link_url:
+      title: Link Url
+      type: string
+      required: True     
+slots:
+  link_text:
+    title: string
+    type: string
+    description: Optional text for the link. If not provided, URL will be displayed.

@@ -1,6 +1,9 @@
-@import "./components/button.css";
+@import "./global.css";
+
+
 @import "./components/hero.css";
 @import "./components/localTasks.css";
 @import "./components/paragraph.css";
-@import "./components/typography.css";
+
+
 
