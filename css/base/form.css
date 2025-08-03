@@ -1,0 +1,9 @@
+/* Styling for forms */
+@layer base {
+
+  input[type="text"],
+  input[type="month"] {
+    outline: none;
+  }
+
+}

@@ -5,9 +5,12 @@
   .prose {
     color: var(--ridd-prose-body);
     max-width: 65ch;
+    font-size: 1rem;
+    line-height: 2;
+
   }
 
-  p.prose {
+  .prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
   }
@@ -298,11 +301,7 @@
     line-height: 1.4285714;
     margin-top: 0.8571429em;
   }
-  
-  .prose {
-    font-size: 1rem;
-    line-height: 1.75;
-  }
+
   .prose :where(picture > img):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
     margin-top: 0;
     margin-bottom: 0;

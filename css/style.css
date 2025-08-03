@@ -7,6 +7,11 @@
 /* Prose and typography at the base level */
 @import "./base/typography.css"; 
 
+/* Forms and form elements global */
+@import "./base/form.css";
+
+
+/* OLD version--loists of styling to take from this though */
 @import "./components/hero.css";
 @import "./components/localTasks.css";
 @import "./components/paragraph.css";
@@ -41,13 +46,13 @@
 
   /* prose variables */
     .prose {
-    --ridd-prose-body: #1f2329;
+    --ridd-prose-body: #000918;
     --ridd-prose-headings: #111827;
     --ridd-prose-lead: #4b5563;
     --ridd-prose-links: #143b8d;
     --ridd-prose-bold: #111827;
-    --ridd-prose-counters: #6b7280;
-    --ridd-prose-bullets: #d1d5db;
+    --ridd-prose-counters: #030e1f;
+    --ridd-prose-bullets: #030e1f;
     --ridd-prose-hr: #e5e7eb;
     --ridd-prose-quotes: #111827;
     --ridd-prose-quote-borders: #e5e7eb;
