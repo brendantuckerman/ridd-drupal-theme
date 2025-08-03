@@ -8,7 +8,10 @@ const config = {
      "../src/**/*.stories/**/*.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
+    '@storybook/addon-a11y',
+    '@storybook/addon-viewport', 
+
   ],
   "framework": {
     "name": "@storybook/html-vite",

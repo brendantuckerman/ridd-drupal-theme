@@ -1,0 +1,30 @@
+# ridd.breakpoints.yml
+ridd.mobile:
+  label: Mobile
+  mediaQuery: '(max-width: 767px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+ridd.tablet:
+  label: Tablet
+  mediaQuery: '(min-width: 768px) and (max-width: 1023px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+ridd.desktop:
+  label: Desktop
+  mediaQuery: '(min-width: 1024px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+ridd.wide:
+  label: Wide Desktop
+  mediaQuery: '(min-width: 1440px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x

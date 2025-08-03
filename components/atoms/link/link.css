@@ -1,0 +1,22 @@
+/* CSS for links */
+
+/* global */
+.ridd-link {
+  text-decoration: underline;
+}
+
+/* Hover
+.ridd-link:hover {
+  
+} */
+
+/* Focus */
+
+
+
+/*  External */
+.ridd-link--external  {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
