@@ -18,12 +18,12 @@ export default {
       description: 'Whether the link is internal or external'
     }
 
-
   }
 };
 
 const Template = ({ link_url, link_text, external }) => {
   const classes = [
+    'prose',
     'ridd-link',
     external ? 'ridd-link--external' : ''
   ].filter(Boolean).join(' ');
@@ -53,6 +53,12 @@ Default.args = {
   link_url: 'example.com',
   link_text: "visit example site here",
   external: false
+}
+
+export const NoLink = Template.bind({});
+NoLink.args = {
+  link_url: 'example.com',
+  external: true
 }
 
 export const External = Template.bind({});

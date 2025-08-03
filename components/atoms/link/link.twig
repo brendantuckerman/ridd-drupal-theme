@@ -1,6 +1,7 @@
 
 {%
   set classes = [
+    'prose',
     'ridd-link',
     'ridd-link--external',
     attributes.class ? attributes.class
@@ -10,7 +11,6 @@
 <a href="{{ link_url }}" {{ attributes }}>
   {{ link_text || link_url }}
   {% if external %}
-
     <svg class="link__icon" width="800px" height="800px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"aria-hidden="true">
       
       <rect id="Icons" x="-896" y="0" width="1280" height="800" style="fill:inherit;"/>
