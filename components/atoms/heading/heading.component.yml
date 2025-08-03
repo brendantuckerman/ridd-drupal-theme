@@ -1,8 +1,11 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Heading
 description: A simple heading.
+status: experimental
 props:
   type: object
+  required: 
+    - level
   properties:
     level:
       title: Heading level
