@@ -1,0 +1,17 @@
+
+{# Twig for hamburger menu for mobile nav #}
+{#  #}
+
+<button id="ridd-hamburger-menu-toggle"
+        @click="isOpen = !isOpen"
+        type="button"
+        :class="{
+          'transition transform-180 ridd-hamburger-white-open': isOpen,
+          'ridd-hamburger-primary-closed': !isOpen
+        }"
+        aria-label="Open menu"
+        aria-expanded="false"
+        :aria-expanded="isOpen ? 'true' : 'false'">
+  {{ include('./hamburger.svg') }}
+  Menu
+</button>

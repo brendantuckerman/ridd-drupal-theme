@@ -14,20 +14,23 @@
  */
 #}
 {% block content %}
-<div id="ridd-site-branding" class="container flex p-4 items-center justify-center gap-4 font-semibold
-">
+<div id="ridd-site-branding">
   {% if site_logo %}
     <a href="{{ path('<front>') }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" 
-      class="max-h-24 min-h-12"
+      <img id="ridd-site-logo"src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" 
       />
     </a>
   {% endif %}
-  {% if site_name %}
-    <a href="{{ path('<front>') }}" rel="home"
-    class="text-xl sm:text-2xl"
-    >{{ site_name }}</a>
-  {% endif %}
-  {{ site_slogan }}
+  <div class="ridd-site-branding-text-container">
+    {% if site_name %}
+      <a href="{{ path('<front>') }}" rel="home" id="ridd-site-name"
+      >{{ site_name }}</a>
+    {% endif %}
+    {% if site_slogan %}
+      <h3 id="ridd-site-slogan">
+        {{ site_slogan }}
+      </h3> 
+    {% endif %}
+  </div>
 </div>
 {% endblock %}

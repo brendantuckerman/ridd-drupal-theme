@@ -26,10 +26,13 @@
     --color-primary-light: #E7CFCD;
     --color-secondary: #9F9AA4;
     --color-secondary-light: #CFD8D7;
-    --color-secondar-dark: #B5C9C3;
+    --color-secondary-dark: #B5C9C3;
     --color-highlight: #e4e685;
     --color-secondary-darker: #8b888f;
     --color-secondary-lighter: #e9e9e9;
+  
+    /* Non prose 'text' elements */
+    --ridd-text-body: #000918;
     
 
     /* Highlight on focus */

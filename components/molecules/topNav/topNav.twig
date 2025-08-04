@@ -1,0 +1,20 @@
+{# Twig for the top nav.x-data should be decalred here.
+ # isOpen is togled by the button 
+ # On isOpen, it should display the nav. 
+ #}
+
+<nav x-data="{ isOpen: false }">
+  {# Just links = ie tablet and above#}
+  <div class="ridd-top-nav-desktop-wrapper">
+  {{ include('navigation/menu--main.html.twig' ignore_missing) }}
+  </div>
+
+  {# Hamburger ie mobile and small#}
+  <div class="ridd-top-nav-mobile-wrapper">
+    {{ include('ridd:hamburger')}}
+    <div id="ridd-top-nav-mobile-full-links-wrapper" 
+         :class="{'dramatic-entry' : isOpen}">
+      {{ include('navigation/menu--main.html.twig' ignore_missing) }}
+  </div>
+
+</nav>

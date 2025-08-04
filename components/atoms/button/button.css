@@ -21,7 +21,6 @@
 
   /* Focus  */
   .ridd-btn:focus-visible {
-
     outline: var(--focus-outline);
     transition: var(--focus-outline-transition);
   }

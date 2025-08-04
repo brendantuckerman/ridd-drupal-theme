@@ -1,6 +1,7 @@
 /** @type { import('@storybook/html-vite').Preview } */
 
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
+import '../css/style.css';
 
 const preview = {
   parameters: {
@@ -11,7 +12,7 @@ const preview = {
       },
     },
     viewport: {
-      options: INITIAL_VIEWPORTS,
+      viewports: INITIAL_VIEWPORTS,
     },
   },
 };

@@ -1,0 +1,35 @@
+/* CSS for Ridd Hamburger menu */
+#ridd-hamburger-menu-toggle {
+  background: transparent;
+  border: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+
+  svg {
+    fill: var(--ridd-text-body);
+    min-height: 2.5rem;
+  }
+}
+
+/* Hover state */
+.ridd-hamburger-white-open:hover {
+  color: white;
+  
+svg {
+    fill: white !important;
+  }
+
+}
+
+
+.ridd-hamburger-primary-closed:hover {
+  color: var(--color-primary-light);
+
+  svg {
+    fill: var(--color-primary-light) !important;
+  }
+
+}

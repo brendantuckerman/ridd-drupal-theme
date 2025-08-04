@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Top Nav
+description: Ridd theme top nav for mobile and desktop.
+status: experimental
+props:
+  type: object
+  properties:
+    links: 
+      title: List of links for the menu
+      type: array
+
+      

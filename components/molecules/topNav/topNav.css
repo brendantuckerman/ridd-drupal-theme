@@ -1,0 +1,53 @@
+
+
+@layer component {
+
+  .ridd-top-nav-desktop-wrapper {
+    display: none;
+  }
+
+  .ridd-top-nav-mobile-wrapper {
+    z-index: 10;
+    position: inherit;
+  }
+
+  #ridd-top-nav-mobile-full-links-wrapper {
+    height: 0;
+    width:  0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary-dark);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -5;
+    transform-origin: top;
+    transition: all 0.4s ease-in-out;
+  }
+
+  #ridd-top-nav-mobile-full-links-wrapper.dramatic-entry {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* Hide mobile on tablet and beyond */
+    .ridd-top-nav-mobile-wrapper {
+      display: none;
+    }
+    /* Display desktop version of menu */
+    .ridd-top-nav-desktop-wrapper {
+      display: block;
+      padding: 0, 0.5rem;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+  
+  }
+}
+
+
