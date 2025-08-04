@@ -11,13 +11,6 @@ export default {
   tags: ['autodocs'],
 }
 
-NoLink.args = {
-  link_url: 'example.com',
-  external: false
-}
-
-
-
 const Template = () => `
   <nav x-data="{ isOpen: false }">
   

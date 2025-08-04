@@ -14,7 +14,7 @@
   }
 }
 
-/* Hover state */
+/* Hover state
 .ridd-hamburger-white-open:hover {
   color: white;
   
@@ -24,12 +24,12 @@ svg {
 
 }
 
-
 .ridd-hamburger-primary-closed:hover {
-  color: var(--color-primary-light);
+  color: var(--color-primary-dark);
 
   svg {
-    fill: var(--color-primary-light) !important;
-  }
+    fill: var(--color-primary-dark) !important;
+  } 
 
 }
+  */

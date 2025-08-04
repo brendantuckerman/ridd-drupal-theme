@@ -21,3 +21,18 @@ Set by css/layer.css:
 
 @layer reset, base, theme, component, utilities, overrides; 
 
+## Breakpoints ##
+
+/* Tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  Desktop 
+  @media screen and (min-width: 1024px) {
+
+  }
+
+   Wide 
+  @media screen and (min-width: 1440px)  {
+
+  }
+  */

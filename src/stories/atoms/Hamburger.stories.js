@@ -1,7 +1,5 @@
 import "../../../components/atoms/hamburger/hamburger.css";
 
-
-
 export default {
   title: "Ridd/Atoms/Hamburger",
   tags: ['autodocs'],

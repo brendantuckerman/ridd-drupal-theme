@@ -1,0 +1,17 @@
+/* Css for header */
+@layer theme {
+  .ridd-header {
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .ridd-header {
+      flex-direction: row;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
