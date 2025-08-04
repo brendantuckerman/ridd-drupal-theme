@@ -76,6 +76,10 @@
   /*  Desktop */
   @media screen and (min-width: 1024px) {
     
+    #ridd-site-branding {
+      align-items: center;
+    }
+
     #ridd-site-name {
         font-size: 2em;
       }

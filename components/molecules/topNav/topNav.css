@@ -29,6 +29,7 @@
     a {
       font-size: 2em;
       padding: 0.5rem;
+
     }
 
     a:hover {
@@ -57,6 +58,9 @@
       ul {
         display: flex;
         gap: 2rem;
+      }
+      li a {
+        font-weight: 600;
       }
     }
   
