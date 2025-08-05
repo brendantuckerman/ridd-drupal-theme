@@ -12,7 +12,7 @@ export default {
   
 }
 const Template =  () => {
-  return `<header role="banner" class="ridd-header">
+  return `<header role="banner" class="ridd-site-header">
     ${ NoSlogan({
       site_logo: "src/stories/assets/tutorials.svg",
       site_name: "Lorem Ipsum Dolores Uvest"

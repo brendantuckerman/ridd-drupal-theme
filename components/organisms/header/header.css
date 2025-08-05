@@ -1,6 +1,6 @@
 /* Css for header */
 @layer theme {
-  .ridd-header {
+  .ridd-site-header {
     display: flex;  
     flex-direction: column;
     justify-content: space-between;
@@ -9,9 +9,10 @@
   }
 
   @media screen and (min-width: 1024px) {
-    .ridd-header {
+    .ridd-site-header {
       flex-direction: row;
       padding: 0.5rem 1rem;
+      width: 100%;
     }
   }
 }

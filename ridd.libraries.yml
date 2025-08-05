@@ -2,8 +2,8 @@ global-styling:
   version: 1.0.1
   header: true
   css:
-  theme:
-    dist/style.css: {}
+    theme:
+      css/style.css: {}
 
 global-scripts:
   version: 1.0.0

@@ -5,7 +5,7 @@ status: experimental
 props:
   type: object
   properties:
-    links: 
+    menu_items: 
       title: List of links for the menu
       type: array
 

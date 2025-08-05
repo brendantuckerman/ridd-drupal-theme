@@ -4,16 +4,15 @@ description: A simple heading.
 status: experimental
 props:
   type: object
-  required: 
-    - level
   properties:
     level:
       title: Heading level
       type: integer
       minimum: 1
       maximum: 6
+  required: 
+    - level
 
 slots:
   heading_text:
     title: Text
-    required: true

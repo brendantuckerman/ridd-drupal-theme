@@ -14,5 +14,6 @@ props:
     site_slogan: 
       title: Optional site site slogan
       type: string
+      default: null
 
       

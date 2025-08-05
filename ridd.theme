@@ -9,6 +9,37 @@
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
+
+/**
+ * Implements hook_preprocess_HOOK() for region templates.
+ *
+ * Adds site configuration data to regions for use in SDC components.
+ */
+function ridd_preprocess_region(&$variables) {
+  if ($variables['region'] == 'header') {
+    $site_config = \Drupal::config('system.site');
+    $variables['site_name'] = $site_config->get('name');
+    // Note theme_get_setting may be deprecated with
+    // D12 https://www.drupal.org/node/3035289
+    $variables['site_logo'] = theme_get_setting('logo.url');
+    $variables['site_slogan'] = $site_config->get('slogan');
+  }
+
+  // Get main menu
+  $menu_tree = \Drupal::menuTree();
+  $menu_name = 'main';
+  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+  $tree = $menu_tree->load($menu_name, $parameters);
+  $manipulators = [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+  ];
+  $tree = $menu_tree->transform($tree, $manipulators);
+  $variables['main_menu'] = $menu_tree->build($tree);
+  
+}
+
+// part of version 1
 function ridd_preprocess_paragraph(&$variables) {
 
   if($variables["paragraph"]->field_large_card_image){
@@ -23,12 +54,13 @@ function ridd_preprocess_paragraph(&$variables) {
 }
 
 # Make is_front available for page title #
-
+//  part of verson 1
 function ridd_preprocess_page_title(&$variables) {
   $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 }
 
 // Ensure special paths have page.html.twig available
+// Part of version 1
 function ridd_theme_suggestions_node_alter(array &$suggestions, array $variables) {
   $node = $variables['elements']['#node'];
   $path = \Drupal::service('path.current')->getPath();

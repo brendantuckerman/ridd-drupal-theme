@@ -36,7 +36,14 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>
-        {{ link(item.title, item.url) }}
+        {# Pass this to Ridd link atom #}
+        {% embed 'ridd:link' with {
+          link_text: item.title,
+          link_url: item.url
+        } 
+         %}
+        {% endembed %}
+        {# {{ link(item.title, item.url) }} #}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

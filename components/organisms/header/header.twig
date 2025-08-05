@@ -1,0 +1,19 @@
+<header{{ attributes.addClass('ridd-site-header') }} role="banner">
+    {% embed 'ridd:siteBranding' with {
+         site_name: site_name,
+         site_logo: site_logo,
+         site_slogan: site_slogan
+    }
+     %}
+    {% endembed %}
+
+    {% embed 'ridd:topNav' with {
+      menu_items: menu_items 
+    } %}
+      {% block block_name %}
+        
+      {% endblock %}
+    {% endembed %}
+</header>
+
+

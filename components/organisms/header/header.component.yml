@@ -3,4 +3,7 @@ name: Header
 description: Ridd theme header for mobile and desktop.
 status: experimental
 
-      
+slots:
+  additional_content:
+    title: Additional Header content
+    description: 'Alternative slot for extra header'      

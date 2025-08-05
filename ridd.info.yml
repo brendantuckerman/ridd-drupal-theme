@@ -1,13 +1,13 @@
 name: 'Ridd'
 type: theme
 version: 1.0.0
-description: 'An accessible Drupal 11 theme built for Ridd Psychology using Tailwind'
+description: 'An accessible Drupal 11 theme built for Ridd Psychology using SDC'
 core_version_requirement: '>=11.0.8'
 libraries:
  - ridd/global-styling
  - ridd/gloabl-scripts
  - ridd/alpinejs
-# base theme: stable9
+base theme: stable9
 # php: 8.3.13
 logo: images/theme-branding.svg
 screenshot: images/theme-logo.jpg

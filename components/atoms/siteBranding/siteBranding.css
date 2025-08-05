@@ -42,7 +42,7 @@
 
 
   /* Tablet */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (min-width: 768px) {
 
     #ridd-site-branding {
       gap: 1rem;

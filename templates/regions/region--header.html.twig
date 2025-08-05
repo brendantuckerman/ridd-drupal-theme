@@ -14,8 +14,12 @@
      * @ingroup themeable
      */
     #}
-    {% if content %}
-      <div{{ attributes }} class="flex flex-col sm:flex-row justify-between items-center px-8 py-4">
-        {{ content }}
-      </div>
-    {% endif %}
+ {% if content %}
+  {% embed 'ridd:header' with {
+    site_name: site_name,
+    logo_url: logo_url,
+    site_slogan: site_slogan,
+    menu_items: main_menu  
+  } %}
+  {% endembed %}
+{% endif %}

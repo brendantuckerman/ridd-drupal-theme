@@ -7,7 +7,8 @@ props:
     link_url:
       title: Link Url
       type: string
-      required: True     
+  required:  
+    - link_url    
 slots:
   link_text:
     title: string
