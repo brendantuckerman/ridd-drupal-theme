@@ -1,0 +1,12 @@
+@layer reset, base, theme, component, utilities, overrides;
+
+@layer theme {
+  
+  footer.ridd-site-footer {
+    background-color: var(--color-secondary);
+    width: 100%;
+    min-height: 8rem;
+    padding: var(--ridd-gutter-width);
+    margin-top: var(--ridd-gutter-width);
+  }
+}

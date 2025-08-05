@@ -1,8 +1,9 @@
+@layer reset, base, theme, component, utilities, overrides;
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* Sets global css rules for Ridd them */
 @layer reset {
 
- 
   /* useful defaults from Tailwind */
   *, ::before, ::after {
     --tw-border-spacing-x: 0;
@@ -289,13 +290,6 @@
     -webkit-appearance: button; /* 1 */
   }
 
-  /*
-  Use the modern Firefox focus style for all focusable elements.
-  */
-
-  :-moz-focusring {
-    outline: auto;
-  }
 
   /*
   Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)

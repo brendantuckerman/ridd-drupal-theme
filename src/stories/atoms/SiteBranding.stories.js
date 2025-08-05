@@ -1,4 +1,4 @@
-import "../../../components/atoms/siteBranding/siteBranding.css";
+import "../../../components/atoms/site_branding/site_branding.css";
 
 export default {
   title: "Ridd/Atoms/SiteBranding",

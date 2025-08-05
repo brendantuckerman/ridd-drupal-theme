@@ -1,4 +1,6 @@
+@layer reset, base, theme, component, utilities, overrides;
 /* Heading levels */
+
 @layer component {
 
   /* remove defaults and add global styles */

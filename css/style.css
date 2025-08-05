@@ -10,11 +10,15 @@
 /* Forms and form elements global */
 @import "./base/form.css";
 
+/* Declared in page.html.twig rather than SDC*/
+@import "./theme/footer.css";
 
 /* OLD version--loists of styling to take from this though */
 @import "./components/hero.css";
-@import "./components/localTasks.css";
+@import "./components/localTasks.css"; /* Checked and in use */
 @import "./components/paragraph.css";
+
+@layer reset, base, theme, component, utilities, overrides;
 
 @layer base {
    :root {
@@ -39,13 +43,42 @@
     --focus-outline: 0.5rem solid var(--color-highlight);
     --focus-outline-transition: outline 0.3s ease-in-out;
 
+    /* Gutter width for regions / sections  equivalent to .container in TW */
+    --ridd-gutter-width: 1rem;
+
    }
 
-  body {
-    
-    font-family: 'Raleway', sans;
+  /* Media vars */
+  /* Tablet */
+  @media (min-width: 768px) {
+    :root {
+
+    /* Gutter width for regions / sections  equivalent to .container in TW */
+    --ridd-gutter-width: 1.5rem;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+
+    :root {
+        /* Gutter width for regions / sections  equivalent to .container in TW */
+        --ridd-gutter-width: 2rem;
+      }
 
   }
+  /* Wide */
+  @media screen and (min-width: 1440px) {
+    :root {
+        /* Gutter width for regions / sections  equivalent to .container in TW */
+        --ridd-gutter-width: 3rem;
+      }
+  }
+
+  body {
+    font-family: 'Raleway', sans;
+  }
+
 
   /* prose variables */
     .prose {

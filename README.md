@@ -15,6 +15,22 @@ Author: NewTrick (Brendan Tuckerman)
 
 ### Dev reference ###
 
+## Regions ##
+
+regions:
+  #...
+  messages: "Message area"
+  header: Header
+  breadcrumb: Breadcrumb
+  help: Help
+  hero: Hero
+  content: "Main Content"
+  sidebar_first: "Sidebar first"
+  sidebar_secondary: "Sidebar secondary"
+  footer: Footer
+  subFooter: "Sub Footer"
+  disabled: "Disabled"
+
 ## CSS Layer priority ##
 
 Set by css/layer.css:

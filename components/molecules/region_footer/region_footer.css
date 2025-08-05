@@ -1,0 +1,34 @@
+@layer reset, base, theme, component, utilities, overrides;
+
+@layer theme {
+  
+  .ridd-region-footer-container {
+     max-width: 100vw;
+     margin: 0 auto;
+  }
+
+  .ridd-region-footer-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .ridd-region-footer-col-1-branding {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  /* Media vars */
+  /* Tablet */
+  @media (min-width: 768px) {
+    .ridd-region-footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ridd-region-footer-col-1-branding {
+      justify-content: flex-start;
+    }
+  }
+
+
+}

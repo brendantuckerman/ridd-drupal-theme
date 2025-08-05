@@ -1,15 +1,17 @@
 /* CSS for the Ridd Site Branding component */
-
+@layer reset, base, theme, component, utilities, overrides;
 @layer component {
 
   #ridd-site-branding {
     display: flex;
     gap: 0.5rem;
-    padding: 1rem;
     font-weight: 700;
     justify-content: center;
-    align-items: start;
     z-index: 2;
+
+    img {
+      margin: 0;
+    }
   }
 
   #ridd-site-logo {
@@ -69,8 +71,6 @@
     #ridd-site-slogan {
       display: block;
     }
-
-
   }
 
   /*  Desktop */

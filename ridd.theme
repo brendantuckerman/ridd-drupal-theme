@@ -16,26 +16,28 @@ use Drupal\media\Entity\Media;
  * Adds site configuration data to regions for use in SDC components.
  */
 function ridd_preprocess_region(&$variables) {
-  if ($variables['region'] == 'header') {
+  // Grab site details as well as main menu for use in the header/footer
+  if ($variables['region'] == 'header' || $variables['region'] == 'footer' ) {
     $site_config = \Drupal::config('system.site');
     $variables['site_name'] = $site_config->get('name');
     // Note theme_get_setting may be deprecated with
     // D12 https://www.drupal.org/node/3035289
     $variables['site_logo'] = theme_get_setting('logo.url');
     $variables['site_slogan'] = $site_config->get('slogan');
-  }
+  
 
-  // Get main menu
-  $menu_tree = \Drupal::menuTree();
-  $menu_name = 'main';
-  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
-  $tree = $menu_tree->load($menu_name, $parameters);
-  $manipulators = [
-    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
-    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
-  ];
-  $tree = $menu_tree->transform($tree, $manipulators);
-  $variables['main_menu'] = $menu_tree->build($tree);
+    // Get main menu
+    $menu_tree = \Drupal::menuTree();
+    $menu_name = 'main';
+    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+    $tree = $menu_tree->load($menu_name, $parameters);
+    $manipulators = [
+      ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+      ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ];
+    $tree = $menu_tree->transform($tree, $manipulators);
+    $variables['main_menu'] = $menu_tree->build($tree);
+  }
   
 }
 

@@ -23,7 +23,7 @@ regions:
   sidebar_first: "Sidebar first"
   sidebar_secondary: "Sidebar secondary"
   footer: Footer
-  subFooter: "Sub Footer"
+  sub_footer: "Sub Footer"
   disabled: "Disabled"
 
 ckeditor5-stylesheets:

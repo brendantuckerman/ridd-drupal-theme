@@ -43,7 +43,8 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container min-h-screen flex flex-col grow">
+<div class="layout-container">
+
   <header role="banner" class="ridd-header">
    {% if page.messages %}
     {{ page.messages }}
@@ -80,16 +81,16 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo" class="bg-primary-light w-screen pt-8">
-      {{ page.footer }}
 
+  <footer role="contentinfo" class="ridd-site-footer">
+  {# Note the difference between region footer and footer as a whole #}
+  {% if page.footer %}
+    {{ page.footer }}
   {% endif %}
 
    {% if page.sub_footer %}
-      {{ page.sub_footer }}
+    {{ page.sub_footer }}
   {% endif %}
-    </div>
-   </footer>
+  </footer>
 
 </div>{# /.layout-container #}
