@@ -1,5 +1,4 @@
 '$schema': https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/assets/schemas/v1/metadata.schema.json
-
 name: Button
 status: experimental
 description: 'A reusable button component with multiple variants and states.'

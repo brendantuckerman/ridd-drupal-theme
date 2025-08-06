@@ -14,14 +14,14 @@
  */
 #}
 {% if content %}
+
   <div{{ attributes }}>
   {# Now moved to region-footer SDC 
-    the isssue here is content is 
-    just the html
+     footer_structured_data contains the elements to render in each col
+     of the footer
    #}
-   {{ dump(_context) }}
   {% embed 'ridd:region_footer' with {
-     footer_region_content: content,
+     footer_region_content: footer_structured_data,
      site_name: site_name,
      site_logo: site_logo,
      site_slogan: site_slogan

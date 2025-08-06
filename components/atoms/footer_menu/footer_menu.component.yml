@@ -1,0 +1,67 @@
+$schema': https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/assets/schemas/v1/metadata.schema.json
+name: Footer Menu
+status: experimental
+description: 'A reusable footer menu component with title and links'
+props:
+  type: object
+  required:
+    - menu_title
+    - menu_links
+  properties:
+    menu_title:
+      type: string
+      title: Menu Title
+      description: The title displayed above the menu links
+      examples:
+        - 'Quick Links'
+        - 'About this site'
+        - 'Contact'
+    menu_links:
+      type: array
+      title: Menu Links
+      description: Array of menu link objects
+      libk_item:
+        type: object
+        required:
+          - name
+          - url
+        properties:
+          name:
+            type: string
+            title: Link Text
+            description: The text displayed for the link
+            examples:
+              - 'About Us'
+              - 'Contact'
+          url:
+            type: array
+            title: Link URL
+            description: The URL the link points to
+            examples:
+              - '/about'
+              - 'https://example.com'
+              - '<front>'
+          icon:
+            type: string
+            title: Icon Class
+            description: Optional icon class name (e.g., Font Awesome, Material Icons)
+            examples:
+              - 'fa fa-home'
+              - 'material-icons-home'
+              - 'icon-arrow-right'
+          target:
+            type: string
+            title: Link Target
+            description: Optional target attribute for the link
+            enum:
+              - '_blank'
+              - '_self'
+              - '_parent'
+              - '_top'
+          attributes:
+            type: object
+            title: Additional Attributes
+            description: Additional HTML attributes for the link
+            additionalProperties:
+              type: string
+

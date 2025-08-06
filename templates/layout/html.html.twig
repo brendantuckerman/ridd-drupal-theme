@@ -48,7 +48,12 @@ __   __                _____      _
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <js-placeholder token="{{ placeholder_token }}">
+        {% block scripts  %}
+        {# Alpine #}
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        {# Fonat Awesome #}
+        <script src="https://kit.fontawesome.com/e3c12d3292.js" crossorigin="anonymous"></script>
+        {% endblock   %}
       </head>
       <body{{ attributes }}>
         {#

@@ -1,0 +1,31 @@
+
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+<div{{ attributes }}>
+    {# Move to sub footer #}
+  <div class="pt-6 mt-12 border-t border-slate-800">
+    <div class="text-center sm:flex sm:justify-between sm:text-left">
+      {{ content }}
+      <p class="mt-4 text-sm text-slate-800 sm:order-first sm:mt-0">
+        &copy; {{ 'now' | date('Y') }} 
+        {% if site_name %}
+          {{ site_name}}  
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</div>
+{% endif %}

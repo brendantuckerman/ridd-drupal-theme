@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * ridd-footer Menu component template.
+ *
+ * Variables:
+ * - menu_title: The title of the menu.
+ * - menu_links: An array of link objects containing:
+ *   - name: The link text.
+ *   - url: The link URL.
+ *   - icon: (optional) Icon class.
+ *   - target: (optional) Link target attribute.
+ *   - attributes: (optional) Additional HTML attributes.
+ */
+#}
+
+{% set classes = [
+  'ridd-footer-menu',
+  'ridd-footer-menu--' ~ menu_title|clean_class,
+] %}
+
+<nav{{ attributes.addClass(classes) }} role="navigation" aria-labelledby="ridd-footer-menu-{{ menu_title|clean_id }}">
+  {% if menu_title %}
+    <h3 id="ridd-footer-menu-{{ menu_title|clean_id }}" class="ridd-footer-menu__title">
+      {{ menu_title }}
+    </h3>
+  {% endif %}
+  
+  {% if menu_links %}
+    <ul class="ridd-footer-menu__list">
+      {% for link in menu_links %}
+        {% set link_classes = [
+          'ridd-footer-menu__link',
+          link.icon ? 'ridd-footer-menu__link--has-icon',
+        ] %}
+        <li class="ridd-footer-menu__item">
+          <a href="{{ link.url }}" 
+             class="{{ link_classes|join(' ') }} ridd-link"
+             {% if link.target %}target="{{ link.target }}"{% endif %}
+             {% if link.attributes %}
+               {% for attr_name, attr_value in link.attributes %}
+                 {{ attr_name }}="{{ attr_value }}"
+               {% endfor %}
+             {% endif %}>
+            {% if link.icon %}
+             <p>{{ link_icon }}</p>
+              <span class="ridd-footer-menu__icon {{ link.icon }}"></span>
+            {% endif %}
+            <span class="ridd-footer-menu__text">{{ link.name }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

@@ -17,7 +17,9 @@ use Drupal\media\Entity\Media;
  */
 function ridd_preprocess_region(&$variables) {
   // Grab site details as well as main menu for use in the header/footer
-  if ($variables['region'] == 'header' || $variables['region'] == 'footer' ) {
+  if ($variables['region'] == 'header' || $variables['region'] == 'footer' 
+       || $variables['region'] == 'sub_footer'
+   ) {
     $site_config = \Drupal::config('system.site');
     $variables['site_name'] = $site_config->get('name');
     // Note theme_get_setting may be deprecated with
@@ -38,7 +40,62 @@ function ridd_preprocess_region(&$variables) {
     $tree = $menu_tree->transform($tree, $manipulators);
     $variables['main_menu'] = $menu_tree->build($tree);
   }
+
+  // Grab content as elements to create a footer
+  if ($variables['region'] == 'footer') {
+    // Process elements and make data available
+    $footer_data = [];
+    
+    foreach ($variables['elements'] as $key => $element) {
+      if (strpos($key, '#') !== 0) {
+        // This is a block
+        if (isset($element['#base_plugin_id'])) {
+          $footer_data['blocks'][] = [
+            'type' => $element['#base_plugin_id'],
+            'label' => $element['#configuration']['label'] ?? '',
+            'content' => $element,
+          ];
+        }
+      }
+    }
+    
+    $variables['footer_structured_data'] = $footer_data;
+  }
   
+}
+
+
+
+/**
+ * Preprocess menu to extract icons from description.
+ */
+function ridd_preprocess_menu(&$variables) {
+  foreach ($variables['items'] as &$item) {
+    if (isset($item['original_link'])) {
+      $description = $item['original_link']->getDescription();
+       $item['icon_class'] = $description;
+      
+    }
+    
+     // Process child items
+    if (!empty($item['below'])) {
+      ridd_process_submenu_items($item['below']);
+    }
+    
+  }
+} 
+
+function ridd_process_submenu_items(&$items) {
+  foreach ($items as &$item) {
+    if (isset($item['original_link'])) {
+      $description = $item['original_link']->getDescription();
+       $item['icon_class'] = $description;
+    }
+    
+    if (!empty($item['below'])) {
+      ridd_process_submenu_items($item['below']);
+    }
+  }
 }
 
 // part of version 1
@@ -60,7 +117,6 @@ function ridd_preprocess_paragraph(&$variables) {
 function ridd_preprocess_page_title(&$variables) {
   $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 }
-
 // Ensure special paths have page.html.twig available
 // Part of version 1
 function ridd_theme_suggestions_node_alter(array &$suggestions, array $variables) {

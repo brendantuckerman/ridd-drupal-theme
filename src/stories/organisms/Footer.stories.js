@@ -37,6 +37,19 @@ const Template = ({ site_logo, site_name, site_slogan }) => {
     ${site_slogan}
   </h3>` : "";
 
+  const placeHolderMenu = `<h3>Menu Title</h3><ul>
+                
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i>Item 1
+                      </li>
+                      <li>
+                        Item 2
+                      </li>
+                      <li>
+                        Item 3
+                      </li>
+                    </ul>`
+
 
 
 
@@ -51,20 +64,10 @@ const Template = ({ site_logo, site_name, site_slogan }) => {
                       ${sloganBlock} 
                      </div>
                     </div>
-                    <div class="placholder menuu 1">
-                    <ul>
-                      <h3>Menu 1</h3>
-                      <li>
-                        Item 1
-                      </li>
-                      <li>
-                        Item 2
-                      </li>
-                      <li>
-                        Item 3
-                      </li>
-                    </ul>
+                  <div class="placeholder-menu-1">
+                    ${placeHolderMenu}
                   </div>
+                      
                    
                 </div>
                 <p>Footer Content 2</p>

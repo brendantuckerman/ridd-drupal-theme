@@ -31,6 +31,20 @@ regions:
   subFooter: "Sub Footer"
   disabled: "Disabled"
 
+
+  ## Footer & Menu Icons ##
+
+  Menus intended to be part of the footer should be processed forst in their 
+  menu/menu-MENUNAME.html.twig first. Use menu--footer.html.twig as an example.
+  
+  Each menu will be added to a new column. Desktop view is set to 4 coulums (so 
+  inteded for 3 menus - 'Quick Links' 'About this site', 'Contact')
+
+  Icons for the menu items are a bit of a hack. You can use the description field
+  for the class name. The theme uses font awesome Classic Regular https://fontawesome.com/search?f=classic&s=regular&ic=free&o=r. You only need to add the
+  name of the spcific icon (e.g. fa-home) in the format fa-home|Home format in the 
+  description field.
+
 ## CSS Layer priority ##
 
 Set by css/layer.css:

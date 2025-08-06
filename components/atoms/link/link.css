@@ -1,47 +1,6 @@
 /* CSS for links */
 @layer theme {
 
-  /* global */
-  .ridd-link {
-    text-decoration: underline;
-    position: relative;
-    display: inline-block;
-    overflow: hidden; /* Important: keeps the effect contained */
-    width: fit-content;
-  }
-  
-  /* Hover */
-  .ridd-link::before {
-    background-color: var(--color-primary-light);
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    transition: width 0.5s ease-in-out;
-    z-index: -1; /* Keeps it behind the text */
-  }
-  
-  .ridd-link:hover::before {
-    width: 100%;
-  }
-  
-  /* Focus */
-  .ridd-link:focus-visible {
-    outline: var(--focus-outline);
-    transition: var( --focus-outline-transition);
-  }
-  
-  /*  External */
-  .ridd-link--external  {
-    display: flex;
-    gap: 0.2rem;
-    align-items: center;
-
-    svg {
-      min-width: 1rem;
-    }
-  }
+ 
 
 }  

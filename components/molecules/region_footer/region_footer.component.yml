@@ -15,7 +15,8 @@ props:
       title: Optional site site slogan
       type: string
       default: null
+
 slots:
-  content:
+  region_footer_content:
     title: Region footer content
     description: 'Slot for footer content'

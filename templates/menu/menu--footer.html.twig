@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override for footer menu using SDC component.
+ * Do the same for any that are intended for use in the footer
+ */
+#}
+{% import _self as menus %}
+
+{# Render the menu #}
+{{ menus.build_menu(items, attributes, 0, menu_name) }}
+
+{% macro build_menu(items, attributes, menu_level, menu_name) %}
+  {% import _self as menus %}
+
+  {# Transform menu items for SDC component #}
+  {% set menu_links = [] %}
+  {% for item in items %}
+    {% set link_item = {
+      'name': item.title,
+      'url': item.url,
+      'icon': item.icon_class|default(null),
+      'target': item.url.getOption('external') ? '_blank' : null,
+      'attributes': item.attributes|default({})
+    } %}
+    {% set menu_links = menu_links|merge([link_item]) %}
+  {% endfor %}
+  
+  {# Use the SDC component #}
+  {{ include('ridd:footer_menu', {
+    'menu_title': 'Footer Menu',
+    'menu_links': menu_links
+  }) }}
+{% endmacro %}
