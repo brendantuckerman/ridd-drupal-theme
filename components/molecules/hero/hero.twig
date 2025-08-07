@@ -1,0 +1,25 @@
+{# 
+  # Hero twig file for Ridd theme
+ #}
+<div{{ attributes.addClass('ridd-hero-hero-wrapper') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+   <div class="grid grid-cols-1 sm:grid-cols-5 rounded 
+               sm:gap-12 font-display hero-section bg-gradient-to-l from-secondary-light to-secondary-dark text-center shadow-md">
+
+    <div class="flex flex-col m-4 gap-12 col-span-3 p-4 sm:p-16">
+    {{ content.field_title }}
+    {{ content.body }}
+    {{ content.field_hero_link }}
+    </div>
+    <div class="rounded col-span-2 w-full h-full bg-white flex items-center
+                home-page-hero-image-wrapper">
+      {{ content.field_hero_image}}
+    </div>
+  </div>
+  {% endblock %}
+</div>

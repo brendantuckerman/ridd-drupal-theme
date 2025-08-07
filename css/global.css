@@ -469,6 +469,21 @@
     display: none;
   }
 
+  /* Other global styling */
+ /* see https: //web.dev/articles/min-max-clamp */
+  p {
+    width: clamp(25ch, 50%, 60ch);
+    font-size: clamp(0.8em, 5vw, 1rem);
+  }
+ 
+  @media screen and (min-width: 768px) {
+    p {
+      /* Optimal */
+      width: clamp(45ch, 50%, 75ch);
+      font-size: clamp(0.6rem, 1vw, 1.25rem);
+    }
+  } 
+
 }
 
 /* See ./style.css for layers */
@@ -485,6 +500,11 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  /* Main layout */
+  main {
+    padding: var(--ridd-gutter-width);
   }
 
 }

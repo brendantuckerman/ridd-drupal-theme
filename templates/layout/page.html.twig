@@ -60,9 +60,9 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       {{ page.hero }}
     {% if is_front %}
-    <div class="layout-content w-screen">
+    <div class="layout-content-front">
     {% else %}
-     <div class="layout-content w-screen px-4 sm:px-16 mx-auto my-0"> {# center content on non-front #}
+     <div class="layout-content-page-content"> {# center content on non-front #}
     {% endif %}
       {{ page.content }}
     </div>{# /.layout-content #}
@@ -82,7 +82,7 @@
   </main>
 
 
-  <footer role="contentinfo" class="ridd-site-footer">
+  <footer role="contentinfo" id="ridd-site-footer">
   {# Note the difference between region footer and footer as a whole #}
   {% if page.footer %}
     {{ page.footer }}
@@ -91,6 +91,6 @@
    {% if page.sub_footer %}
     {{ page.sub_footer }}
   {% endif %}
-  </footer>
+ </footer>
 
 </div>{# /.layout-container #}

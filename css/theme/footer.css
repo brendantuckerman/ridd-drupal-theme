@@ -1,12 +1,26 @@
 @layer reset, base, theme, component, utilities, overrides;
 
 @layer theme {
-  
-  footer.ridd-site-footer {
+
+  footer#ridd-site-footer {
     background-color: var(--color-secondary);
     width: 100%;
     min-height: 8rem;
     padding: var(--ridd-gutter-width);
     margin-top: var(--ridd-gutter-width);
+    position: relative;
+  }
+
+    footer#ridd-site-footer:before {
+    content: '';
+    height: var(--ridd-gutter-width);
+    width: 100vw;
+    background-color: var(--color-primary-light);
+    position: absolute;
+    left: 1rem;
+    top:  calc(var(--ridd-gutter-width)/2 * -1);
+    overflow: hidden;
+    transform: skew(-18deg);
+    z-index: -1;
   }
 }

@@ -7,41 +7,33 @@
 
 <div class="ridd-region-footer-container">
   <div class="ridd-region-footer-grid">
-    <div class="ridd-region-footer-col">
-      <div class="ridd-region-footer-col-branding">
-         {% if site_logo %}
-        <a href="{{ path('<front>') }}" rel="home">
-          <img id="ridd-site-logo-footer-region" src="{{ site_logo }}" 
-              alt="{{ 'Home'|t }}" fetchpriority="high"/></a>
-        {% endif %}
-        <div class="ridd-site-branding-text-container-footer-region">
-          {% if site_name %}
-           <a href="{{ path('<front>') }}" rel="home" id="ridd-site-name-footer-region"
-          >{{ site_name }}</a>
-         {% endif %}
-          {% if site_slogan %}
-            <h3 id="ridd-site-slogan-footer-region">
-            {{ site_slogan }}
-           </h3> 
-          {% endif %}
-          {# This could be acknowledgement to country #}
-        </div>
-      </div> 
-    </div>
-
-    {% for key, element in elements %}
-      {% if key|first != '#' and element is iterable %}
-        <div class="a-new-column">
-          {{ element }}
-        </div>
+   
+    {# item 1 #}
+    <div class="ridd-region-footer-branding">
+        {% if site_logo %}
+      <a href="{{ path('<front>') }}" rel="home">
+        <img id="ridd-site-logo-footer-region" src="{{ site_logo }}" 
+            alt="{{ 'Home'|t }}" fetchpriority="high"/></a>
       {% endif %}
-    {% endfor %}
-       
-
+      <div class="ridd-site-branding-text-container-footer-region">
+        {% if site_name %}
+          <a href="{{ path('<front>') }}" rel="home" id="ridd-site-name-footer-region"
+        >{{ site_name }}</a>
+        {% endif %}
       </div>
+    </div> 
+  
+  {# Intended to be 4 other elements for footer #}
+  {% for key, element in elements %}
+    {% if key|first != '#' and element is iterable %}
+    <div class="ridd-region-footer-element-wrapper">
+      {{ element }}
     </div>
+    <hr class="ridd-footer-divider">
+    {% endif %}
+  {% endfor %}
+      
+  </div>
 </div>
 
-
-</div>
 

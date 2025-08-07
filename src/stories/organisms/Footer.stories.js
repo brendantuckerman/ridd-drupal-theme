@@ -37,44 +37,83 @@ const Template = ({ site_logo, site_name, site_slogan }) => {
     ${site_slogan}
   </h3>` : "";
 
-  const placeHolderMenu = `<h3>Menu Title</h3><ul>
+  const placeHolderMenu = `<h3>Contact</h3><ul>
                 
                       <li>
-                        <i class="fa-regular fa-circle-user"></i>Item 1
+                        <a>Privacy</a>
                       </li>
                       <li>
-                        Item 2
+                        <a>About</a>
                       </li>
                       <li>
-                        Item 3
+                        <a>About</a>
+                      </li>
+                      <li>
+                        <a>An annoying long one</a>
+                      </li>
+                      <li>
+                        <a>About</a>
+                      </li>
+                      <li>
+                        <a>About</a>
                       </li>
                     </ul>`
 
+  const placeholderIconMenu = `<h3>Contact</h3><ul>
+                
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>Privacy</a>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>About</a>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>About</a>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>An annoying long one</a>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>About</a>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-user"></i><a>About</a>
+                      </li>
+                    </ul>`
+
+  const placeholderBlock1 = `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur magna massa, vitae dignissim justo sagittis vel. Pellentesque ac efficitur lacus, id dignissim odio. 
+  Aenean pellentesque sodales nibh, et viverra felis imperdiet vel.</p>`
 
 
-
-  return `<footer role="contentinfo" class="ridd-site-footer">
+  return `<footer role="contentinfo" id="ridd-site-footer">
             <div class="ridd-region-footer-container">
               <div class="ridd-region-footer-grid">
-                <div class="ridd-region-footer-col-1">
-                    <div class="ridd-region-footer-col-1-branding">
-                      ${logoBlock}
-                     <div class="ridd-site-branding-text-container-footer-region">
-                      ${nameBlock}
-                      ${sloganBlock} 
-                     </div>
+
+                  <div class="ridd-region-footer-branding">
+                    ${logoBlock}
+                    <div class="ridd-site-branding-text-container-footer-region">
+                    ${nameBlock}
                     </div>
-                  <div class="placeholder-menu-1">
+                  </div>
+
+                  <div class="ridd-region-footer-element-wrapper">
+                    ${placeholderBlock1}
+                  </div>
+                  <hr class="ridd-footer-divider">
+                  <div class="ridd-region-footer-element-wrapper">
                     ${placeHolderMenu}
                   </div>
-                      
-                   
+                   <hr class="ridd-footer-divider">
+                  <div class="ridd-region-footer-element-wrapper">
+                    ${placeholderIconMenu}
+                  </div>
+                  <hr class="ridd-footer-divider">
+                  <div class="ridd-region-footer-element-wrapper">
+                    ${placeHolderMenu}
+                  </div>
+                   <hr class="ridd-footer-divider">
                 </div>
-                <p>Footer Content 2</p>
-                <p>Footer Content 3</p>
-              </div>
-            </div>
-             <div>
+              <div>
                   <p> Sub footer region content</p>
               </div>
         </footer>`

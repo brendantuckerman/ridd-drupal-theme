@@ -41,9 +41,8 @@ regions:
   inteded for 3 menus - 'Quick Links' 'About this site', 'Contact')
 
   Icons for the menu items are a bit of a hack. You can use the description field
-  for the class name. The theme uses font awesome Classic Regular https://fontawesome.com/search?f=classic&s=regular&ic=free&o=r. You only need to add the
-  name of the spcific icon (e.g. fa-home) in the format fa-home|Home format in the 
-  description field.
+  for the class name. The theme uses font awesome Classic Regular https://fontawesome.com/search?f=classic&s=regular&ic=free&o=r. Add the full name of the icon (e.g. fa-regular fa-house) in the description field.
+
 
 ## CSS Layer priority ##
 
