@@ -14,7 +14,7 @@
 @import "./theme/footer.css";
 
 /* OLD version--loists of styling to take from this though */
-@import "./components/hero.css";
+
 @import "./components/localTasks.css"; /* Checked and in use */
 @import "./components/paragraph.css";
 
@@ -45,6 +45,9 @@
 
     /* Gutter width for regions / sections  equivalent to .container in TW */
     --ridd-gutter-width: 1rem;
+
+    /* Rounded vars */
+    --ridd-rounded-sm: 0.25rem;
 
    }
 
