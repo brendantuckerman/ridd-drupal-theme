@@ -6,6 +6,7 @@
   .ridd-btn {
     position: relative;
     background-color: transparent;
+    max-width: fit-content;
 
     span {
       text-transform: uppercase;

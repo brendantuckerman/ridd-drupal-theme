@@ -1,23 +1,21 @@
 global-styling:
-  version: 1.0.1
-  header: true
-  css:
-    theme:
-      css/style.css: {}
-
+    version: 1.0.1
+    header: true
+    css: { theme: { css/style.css: {  } } }
 global-scripts:
-  version: 1.0.0
-  js:
-    dist/main.js: {}
-
+    version: 1.0.0
+    js: { dist/main.js: {  } }
 alpinejs:
-  header: true
-  remote: https://github.com/alpinejs/alpine
-  version: 3.12.0
-  license:
-    name: MIT
-    url: https://github.com/alpinejs/alpine/blob/main/LICENSE.md
-    gpl-compatible: true
-  js:
-    https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js:
-      { type: external, minified: true, attributes: { defer: true } }
+    header: true
+    remote: 'https://github.com/alpinejs/alpine'
+    version: 3.12.0
+    license: { name: MIT, url: 'https://github.com/alpinejs/alpine/blob/main/LICENSE.md', gpl-compatible: true }
+    js: { 'https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js': { type: external, minified: true, attributes: { defer: true } } }
+global-vite:
+    vite: true
+    css: { theme: { src/css/main.css: {  } } }
+    js: { src/js/main.js: { attributes: { type: module } } }
+    dependencies: [core/drupal, core/once, core/jquery, core/drupalSettings]
+hot-module-replacement:
+    js: { 'https://d11-theme-test.ddev.site:5173/@vite/client': { type: external, attributes: { type: module } } }
+    dependencies: [core/drupal]

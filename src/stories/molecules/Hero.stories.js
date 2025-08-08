@@ -1,4 +1,5 @@
 import "../../../components/molecules/hero/hero.css";
+import "../../../components/atoms/button/button.css";
 
 export default {
   title: 'Ridd/Molecules/Hero',
@@ -28,12 +29,13 @@ const Template = ({ text, subtitle, button_text, hero_image }) => {
    <div class="ridd-hero-container">
 
     <div class="ridd-hero-content">
-      ${text}
+       <h1 class="prose ridd-hero-title">${text}</h1>
       ${subtitle}
+    <button class="ridd-btn ridd-btn--primary ridd-btn--medium ">  
       ${button_text}
+    </button>
     </div>
-    <div class="rounded col-span-2 w-full h-full bg-white flex items-center
-                ridd-page-hero-image-wrapper">
+    <div class="ridd-page-hero-image-wrapper">
       <img src="${hero_image}">
     </div>
   </div>

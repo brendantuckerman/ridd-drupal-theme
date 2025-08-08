@@ -10,6 +10,7 @@ use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
 
+require_once __DIR__ . '/includes/vite.php';
 /**
  * Implements hook_preprocess_HOOK() for region templates.
  *
