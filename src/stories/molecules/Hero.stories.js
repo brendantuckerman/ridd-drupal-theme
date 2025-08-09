@@ -25,7 +25,7 @@ export default {
 }
 
 const Template = ({ text, subtitle, button_text, hero_image }) => {
-  return `<div{ class='ridd-hero-hero-wrapper'>
+  return `<div class='ridd-hero-hero-wrapper'>
    <div class="ridd-hero-container">
 
     <div class="ridd-hero-content">
@@ -35,7 +35,7 @@ const Template = ({ text, subtitle, button_text, hero_image }) => {
       ${button_text}
     </button>
     </div>
-    <div class="ridd-page-hero-image-wrapper">
+    <div class="ridd-hero-image-wrapper">
       <img src="${hero_image}">
     </div>
   </div>

@@ -480,7 +480,7 @@
     p {
       /* Optimal */
       width: clamp(45ch, 50%, 75ch);
-      font-size: clamp(0.6rem, 1vw, 1.25rem);
+      font-size: clamp(1rem, 1vw, 1.25rem);
     }
   } 
 
