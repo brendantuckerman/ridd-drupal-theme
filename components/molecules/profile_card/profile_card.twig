@@ -1,0 +1,25 @@
+
+
+<section class="ridd-profile-card-section">
+ <div class="ridd-profile-card-title-wrapper">
+  <h1>{title}</h1>
+  <h3>{sub_title}</h3>
+ </div>
+<div class="ridd-profile-card-background">
+  <div class="ridd-profile-card-image-wrapper">
+    <img src={{image}}></img>
+  </div>
+  <div class="ridd-profile-card-inner-wrapper">
+    <div class="ridd-profile-card-text-wrapper">
+      {{ body }}
+    {% if button %}
+    <div class="ridd-profile-card-button-wrapper">
+    {{
+      button
+    }} 
+    </div>
+  {% endif %}
+    </div>
+  </div>
+</div>
+

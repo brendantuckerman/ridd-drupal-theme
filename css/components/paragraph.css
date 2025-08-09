@@ -70,8 +70,6 @@ All shapes except round
   border-right: 1px solid rgba(0, 0, 0, 0.3);;
 }
 
-
-
 .large-card-top-left-circle-internal {
   bottom: 5%;
   right: 3%;
@@ -137,6 +135,10 @@ All shapes except round
 
   .small-image-card-image-wrapper {
     img {
-      @apply w-full h-full max-h-[320px] rounded object-cover;
+      width: 100%;
+      height: 100%;
+      max-height: 320px;
+      border-radius: var(--ridd-gutter-width);
+      object-fit: cover;
     }
   }

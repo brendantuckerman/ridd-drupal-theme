@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Profile Card
+description: Ridd theme profile intended for about us
+status: experimental
+props:
+  type: object
+  properties:
+    title: 
+      title: Profile card title
+      type: string
+    sub-title: 
+      title: Profile card sub title
+      type: string
+    body:
+      title: Profile card text, probably a bio
+      type: string
+    action_button: 
+      title: Optional text, that if selected will appear in a button
+      type: string
+      default: null
+    image:
+      title: Image url location
+      type: string
+    

@@ -1,0 +1,109 @@
+@layer reset, base, theme, component, utilities, overrides;
+
+@layer theme {
+
+  section.ridd-profile-card-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .ridd-profile-card-background {
+    background-color: var(--color-secondary-darker);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-left: -9999px;
+    margin-right: -9999px;
+    padding-left: 9999px;
+    padding-right: 9999px;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .ridd-profile-card-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ridd-profile-card-image-wrapper {
+    position: relative;
+    z-index: 6;
+  }
+
+  .ridd-profile-card-image-wrapper img{
+      border-radius: 9999px;
+      position: inherit;
+      z-index: 6;
+  }
+
+  .ridd-profile-card-image-wrapper::after {
+    content: " ";
+    position: absolute;
+    border-radius: 9999px;
+    left: 0.5rem;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary-dark);
+    z-index: 5;
+    border: 1px solid var(--color-secondary-light);
+  }
+  
+  .ridd-profile-card-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+
+    .ridd-profile-card-title-wrapper {
+      text-align: end;
+      width: 100%;
+      padding-right: 25vw;
+    }
+
+    .ridd-profile-card-background {
+      height: clamp(30vh, 5vh, 45vh);
+    }
+
+    .ridd-profile-card-inner-wrapper {
+      width: 100vw;
+    }
+
+    .ridd-profile-card-image-wrapper,
+    .ridd-profile-card-text-wrapper {
+      position: absolute;
+      min-width: fit-content;
+      
+    }
+
+    .ridd-profile-card-image-wrapper {
+      left: var(--ridd-gutter-width);
+      top: -10rem;
+      height: clamp(20rem, 5vw, 40rem);
+      width: clamp(20rem, 5vw, 40rem);
+    }
+
+    .ridd-profile-card-text-wrapper {
+        padding-top: 10rem;
+        min-width: 50vw;
+        max-width: 75vw;
+        padding-bottom: 4rem;
+    }
+  }
+
+}
