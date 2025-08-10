@@ -60,11 +60,12 @@
 
   }
 
-
-  p {
-    width: clamp(45ch, 50%, 75ch);
-    font-size: clamp(0.75em, 2vw, 1rem);
-  }
+ #ridd-site-footer {
+   p {
+     width: clamp(45ch, 50%, 75ch);
+     font-size: clamp(0.75em, 2vw, 1rem);
+   }
+ }
 
   /* Media queries */
   /* Large mobile */
@@ -73,11 +74,14 @@
     .ridd-footer-divider{
       display: none;
     }
-
+  
+  #ridd-site-footer {
     p {
       width: clamp(45ch, 50%, 75ch);
       font-size: clamp(0.75em, 2vw, 1rem);
     }
+
+  }
 
     .ridd-region-footer-grid {
       display: grid;

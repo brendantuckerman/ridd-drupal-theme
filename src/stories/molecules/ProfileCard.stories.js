@@ -72,10 +72,10 @@ Default.args = {
   title: 'Amanda Ridd',
   sub_title: 'Clinical Psychologist',
   image: 'https://picsum.photos/400/400',
-  body: 'Software engineer with 5+ years of experience building modern web applications using React, Node.js, and cloud technologies. '
+  body: '<p>Software engineer with 5+ years of experience building modern web applications using React, Node.js, and cloud technologies. '
     + 'UX Designer passionate about creating intuitive and accessible user experiences.' + 'Software engineer with 5+ years of experience building modern web applications using React, Node.js, and cloud technologies. '
-    + 'UX Designer passionate about creating intuitive and accessible user experiences.' ,
-  button: '<button class="ridd-btn--secondary">View Profile</button>',
+    + 'UX Designer passionate about creating intuitive and accessible user experiences.</p><p>Software engineer with 5+ years of experience building modern web applications using React, Node.js, and cloud technologies. UX Designer passionate about creating intuitive and accessible user experiences.Software engineer with 5+ years of experience building modern web applications using React, Node.js, and cloud technologies. UX Designer passionate about creating intuitive and accessible user experiences. </p>' ,
+  button: '<button class="ridd-btn--secondary ridd--btn ridd-btn--small"><span>View Profile</span></button>',
 };
 
 export const WithoutButton = Template.bind({});

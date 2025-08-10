@@ -12,7 +12,7 @@
   }
 
   .ridd-profile-card-background {
-    background-color: var(--color-secondary-darker);
+    background-color: var(--color-secondary-dark);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +33,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding: 0 1rem;
   }
 
   .ridd-profile-card-image-wrapper {
@@ -67,6 +68,8 @@
       gap: 1rem;
     }
 
+
+
   /* Tablet */
   @media screen and (min-width: 768px) {
 
@@ -77,11 +80,15 @@
     }
 
     .ridd-profile-card-background {
-      height: clamp(30vh, 5vh, 45vh);
+      height: clamp(60vh, 5vh, 75vh);
+
     }
 
     .ridd-profile-card-inner-wrapper {
       width: 100vw;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
     }
 
     .ridd-profile-card-image-wrapper,
@@ -92,8 +99,8 @@
     }
 
     .ridd-profile-card-image-wrapper {
-      left: var(--ridd-gutter-width);
-      top: -10rem;
+      left: calc(var(--ridd-gutter-width)* 2);
+      top: -5rem;
       height: clamp(20rem, 5vw, 40rem);
       width: clamp(20rem, 5vw, 40rem);
     }
@@ -103,7 +110,15 @@
         min-width: 50vw;
         max-width: 75vw;
         padding-bottom: 4rem;
+        right: 2rem;
     }
   }
 
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+    .ridd-profile-card-image-wrapper {
+        left: calc(var(--ridd-gutter-width)* 4);
+    }
+
+  }
 }
