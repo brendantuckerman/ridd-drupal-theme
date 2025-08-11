@@ -3,97 +3,100 @@
 
 @layer component {
 
-  /* remove defaults and add global styles */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: inherit;
-    position: relative;
-    padding: 0;
-    margin: 0 0 1rem 0;
-    font-variant: small-caps;
-    font-weight: 800;
-    line-height: 1.1;
-  }
+  [data-component-id="ridd:heading"] {
 
-  /* Mobile sizing  */
+    /* remove defaults and add global styles */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      position: relative;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      font-variant: small-caps;
+      font-weight: 800;
+      line-height: 1.1;
+    }
 
-  h1 {
-    font-size: 2.25em;
-  
-  }
+    /* Mobile sizing  */
 
-  h2 {
-    font-size: 2em;
-
-  }
-
-  h3 {
-    font-size: 1.75em;
-
-  }
-
-  h4 {
-    font-size: 1.5em;
-    
-  }
-
-  h5 {
-    font-size: 1.25em;
-  
-  }
-
-  h6 {
-    font-size: 1em;
-  
-  }
-
-
-  /*  Tablet */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
     h1 {
-    font-size: 3em;
+      font-size: 2.25em;
     
-  }
+    }
 
     h2 {
-      font-size: 2.5em;
-      
+      font-size: 2em;
+
     }
 
     h3 {
-      font-size: 2em;
-    
+      font-size: 1.75em;
+
     }
 
     h4 {
-      font-size: 1.75em;
+      font-size: 1.5em;
       
     }
 
     h5 {
-      font-size: 1.5em;
+      font-size: 1.25em;
+    
     }
-      
 
     h6 {
-      font-size: 1.25em; 
+      font-size: 1em;
+    
+    }
+
+
+    /*  Tablet */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      
+      h1 {
+      font-size: 3em;
       
     }
+
+      h2 {
+        font-size: 2.5em;
+        
+      }
+
+      h3 {
+        font-size: 2em;
+      
+      }
+
+      h4 {
+        font-size: 1.75em;
+        
+      }
+
+      h5 {
+        font-size: 1.5em;
+      }
+        
+
+      h6 {
+        font-size: 1.25em; 
+        
+      }
+    }
+
+    /*  Desktop 
+    @media screen and (min-width: 1024px) {
+
+    }
+
+    /*  Wide 
+    @media screen and (min-width: 1440px)  {
+
+    }
+    */
   }
-
-  /*  Desktop 
-  @media screen and (min-width: 1024px) {
-
-  }
-
-  /*  Wide 
-  @media screen and (min-width: 1440px)  {
-
-  }
-  */
 }

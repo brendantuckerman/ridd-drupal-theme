@@ -2,13 +2,21 @@
 
 Author: NewTrick (Brendan Tuckerman)
 
+TODO:
+*  Add {{ attributes }} to wrapper div of each
+SDC, and then test that these are passed in
 
 ### About ###
+
+Ridd theme was designed for autismasseessementsaustralia.com.au . It is intended to be accessibile, especially for people with autism.  As such, it avoids cluttered layouts and unneeded animations. 
 
 
 ### Installation ###
 
+Thanks to Alex (mophead2904) for his Vite  tooling https://github.com/mophead2904/dvitedlite/tree/main
+
 ## Theme install ##
+
 
 ## Storybook ##
 

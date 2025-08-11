@@ -1,0 +1,9 @@
+@layer reset, base, theme, component, utilities, overrides;
+
+@layer theme {
+  [data-component-id="ridd:small_card"] {
+    /* @todo Add your styles here. */
+  }
+
+}
+

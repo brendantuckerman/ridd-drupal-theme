@@ -1,0 +1,37 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Small card
+status: stable
+description: A small card with image, title, body, and link
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: Image
+      description: Image source
+      # @todo Add examples here.
+      examples: []
+    title:
+      type: string
+      title: Title
+      description: Heading text for the card
+      # @todo Add examples here.
+      examples: []
+    body:
+      type: string
+      title: Body
+      description: Body text for small card
+      # @todo Add examples here.
+      examples: []
+    link_text:
+      type: string
+      title: Link text
+      description: The text for the link
+      # @todo Add examples here.
+      examples: []
+    link_url:
+      type: string
+      title: Link url
+      description: The destination for the link
+      # @todo Add examples here.
+      examples: []

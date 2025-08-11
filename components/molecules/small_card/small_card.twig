@@ -1,0 +1,18 @@
+<div {{ attributes.addClass("ridd-small-card-wrapper") }}>
+    {% if image %}
+  <div class="ridd-small-card-image-container">
+    <img src="{{image}}"></img>
+  </div>
+    {% endif %}
+  <div class="ridd-small-card-text-container">
+    {% if title %}
+      {{ title }}
+    {% endif %}
+    {% if body %}
+      {{ body }}
+    {% endif %}
+    {% if link_text %}
+      <a href="{{link_url}}">{{ link_text }}</a>
+    {% endif %}
+  </div>
+</div>

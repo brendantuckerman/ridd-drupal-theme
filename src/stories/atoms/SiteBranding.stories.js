@@ -20,7 +20,7 @@ export default {
 };
 
 const Template = ({ site_logo, site_name, site_slogan }) => {
-  const logoBlock = site_logo ? `<a href="/" rel="home">
+  const logoBlock = site_logo ? `<a href="/" rel="home" >
       <img id="ridd-site-logo"src="${ site_logo }" alt="Home" fetchpriority="high" 
       />
     </a>` : "";
@@ -31,7 +31,7 @@ const Template = ({ site_logo, site_name, site_slogan }) => {
     ${ site_slogan }
   </h3>` : "";
   
-  return `<div id="ridd-site-branding">${logoBlock} 
+  return `<div id="ridd-site-branding" data-component-id="ridd:site_branding">${logoBlock} 
             <div class="ridd-site-branding-text-container">
             ${nameBlock}${sloganBlock}
             </div>

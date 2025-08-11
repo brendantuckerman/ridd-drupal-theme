@@ -2,129 +2,131 @@
 
 @layer components{
 
-   /* All ridd-btns */
-  .ridd-btn {
-    position: relative;
-    background-color: transparent;
-    max-width: fit-content;
-
-    span {
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    &:hover:not([disabled]) {
-      cursor: pointer; 
-    }
-
-    span:hover {
-      text-decoration: underline;
-    }
-  }
-
-  /* Focus  */
-  .ridd-btn:focus-visible {
-    outline: var(--focus-outline);
-    transition: var(--focus-outline-transition);
-  }
-
-
-  /* Disabled */
-  .ridd-btn:disabled {
-    border: 4px solid rgba(0,0,0,0.2);
-  }
-
-  .ridd-btn--secondary:disabled {
-    background-color:  rgba(0,0,0,0.2);
-  }
-
-  /* Primary ridd-btn - black on primary */
-  .ridd-btn--primary {
-
-    border: 4px solid rgb(0, 0, 0);
-
-    &:after {
-      background-color: var(--color-primary-light);
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      height: 100%;
-      width: 100%;
-      content: "";
-      z-index: -1;
-      transition: transform 0.2s ease-in, width 0.2s ease-out 0.2s;
-    }
-
-    &:hover {
-      span {
-        color: white;
-      }
-      &:after {
-        transform: translate(-10px, -10px);
-        width: calc(100% - 10px);
-      }
-    }
-
-    &:active {
-      &:after {
-        width: 100%;
-      }
-    }
-
-  }
-  /* Secondary ridd-btn - black and white */
-  .ridd-btn--secondary {
-    border: 4px solid var(--color-primary-dark);
-    background: #fff;
-
-    span {
-      color: var(--color-secondary-darh);
-    }
-
-    &:hover {
-      border: 4px solid var(--color-primary-light);
-      span {
-        text-decoration: underline;
-        
-      }
-    }
-      
-  }
-
-  /* Size */
-
-  /* Small */
-  .ridd-btn--small {
-    padding: 0.5rem 0.75rem;
-
-    span {
-      font-size: 1rem;
-      letter-spacing: 2px;
-    }
-  }
-
-  /* Medium */
-  .ridd-btn--medium {
-     padding: 1rem 1.5rem;
-
-    span {
-      font-size: 1.5rem;
-      letter-spacing: 5px;
-      
-    }
-  }
-
-  /* Large */
-  .ridd-btn--large {
-    padding: 1.25rem 1.75rem;
+  [data-component-id="ridd:button"] {
     
-    span {
-      font-size: 1.75rem;
-      letter-spacing: 7px;
-    }
+    /* All ridd-btns */
+   .ridd-btn {
+     position: relative;
+     background-color: transparent;
+     max-width: fit-content;
+ 
+     span {
+       text-transform: uppercase;
+       font-weight: bold;
+     }
+ 
+     &:hover:not([disabled]) {
+       cursor: pointer; 
+     }
+ 
+     span:hover {
+       text-decoration: underline;
+     }
+   }
+ 
+   /* Focus  */
+   .ridd-btn:focus-visible {
+     outline: var(--focus-outline);
+     transition: var(--focus-outline-transition);
+   }
+ 
+ 
+   /* Disabled */
+   .ridd-btn:disabled {
+     border: 4px solid rgba(0,0,0,0.2);
+   }
+ 
+   .ridd-btn--secondary:disabled {
+     background-color:  rgba(0,0,0,0.2);
+   }
+ 
+   /* Primary ridd-btn - black on primary */
+   .ridd-btn--primary {
+ 
+     border: 4px solid rgb(0, 0, 0);
+ 
+     &:after {
+       background-color: var(--color-primary-light);
+       position: absolute;
+       top: 10px;
+       left: 10px;
+       height: 100%;
+       width: 100%;
+       content: "";
+       z-index: -1;
+       transition: transform 0.2s ease-in, width 0.2s ease-out 0.2s;
+     }
+ 
+     &:hover {
+       span {
+         color: white;
+       }
+       &:after {
+         transform: translate(-10px, -10px);
+         width: calc(100% - 10px);
+       }
+     }
+ 
+     &:active {
+       &:after {
+         width: 100%;
+       }
+     }
+ 
+   }
+   /* Secondary ridd-btn - black and white */
+   .ridd-btn--secondary {
+     border: 4px solid var(--color-primary-dark);
+     background: #fff;
+ 
+     span {
+       color: var(--color-secondary-darh);
+     }
+ 
+     &:hover {
+       border: 4px solid var(--color-primary-light);
+       span {
+         text-decoration: underline;
+         
+       }
+     }
+       
+   }
+ 
+   /* Size */
+ 
+   /* Small */
+   .ridd-btn--small {
+     padding: 0.5rem 0.75rem;
+ 
+     span {
+       font-size: 1rem;
+       letter-spacing: 2px;
+     }
+   }
+ 
+   /* Medium */
+   .ridd-btn--medium {
+      padding: 1rem 1.5rem;
+ 
+     span {
+       font-size: 1.5rem;
+       letter-spacing: 5px;
+       
+     }
+   }
+ 
+   /* Large */
+   .ridd-btn--large {
+     padding: 1.25rem 1.75rem;
+     
+     span {
+       font-size: 1.75rem;
+       letter-spacing: 7px;
+     }
+   }
+   
   }
-
-
 }
 
 

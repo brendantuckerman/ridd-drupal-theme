@@ -2,21 +2,23 @@
 
 @layer component {
   /* CSS for Ridd Hamburger menu */
-  #ridd-hamburger-menu-toggle {
-    background: transparent;
-    border: none;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-  
-    svg {
-      fill: var(--ridd-text-body);
-      min-height: 2.5rem;
+  [data-component-id="ridd:hamburger"] {
+
+    #ridd-hamburger-menu-toggle {
+      background: transparent;
+      border: none;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+    
+      svg {
+        fill: var(--ridd-text-body);
+        min-height: 2.5rem;
+      }
     }
   }
-
 }
 
 

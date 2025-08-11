@@ -11,7 +11,8 @@
         }"
         aria-label="Open menu"
         aria-expanded="false"
-        :aria-expanded="isOpen ? 'true' : 'false'">
+        :aria-expanded="isOpen ? 'true' : 'false'"
+        {{ attributes }}>
   {{ include('@ridd/components/atoms/hamburger/hamburger.svg') }}
   Menu
 </button>

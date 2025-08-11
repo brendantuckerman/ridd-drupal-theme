@@ -2,7 +2,7 @@
 @layer reset, base, theme, component, utilities, overrides;
 @layer component {
 
-  #ridd-site-branding {
+#ridd-site-branding {
     display: flex;
     gap: 0.5rem;
     font-weight: 700;
@@ -14,85 +14,89 @@
     }
   }
 
-  #ridd-site-logo {
-    max-height: 2rem;
-    max-width: 2rem;
-    min-height: 1rem;
-    min-width: 1rem;
-  }
-
-  #ridd-site-branding a:focus-visible {
-    outline: var(--focus-outline);
-    transition: var(--focus-outline-transition);
-  }
-
-  #ridd-site-name {
-    font-size: 1em;
-  }
-
-  #ridd-site-slogan {
-    display: none; /* hidden always in mobile */
-    font-size: 1em;
-    font-style: italic;
-    font-weight: 200;
-  }
-
-  #ridd-site-name:hover {
-    color: var(--color-primary-dark);
-    text-decoration: underline;
-  }
-
-
-  /* Tablet */
-  @media screen and (min-width: 768px) {
-
-    #ridd-site-branding {
-      gap: 1rem;
-    }
-
-
-    #ridd-site-name {
-     font-size: 2em;
-    }
-
+  [data-component-id="ridd:site_branding"] {
+   
+  
     #ridd-site-logo {
-      max-height: 4rem;
-      max-width: 4rem;
-      min-height: 2rem;
-      min-width: 2rem;
-      margin-top: 0.5rem;
+      max-height: 2rem;
+      max-width: 2rem;
+      min-height: 1rem;
+      min-width: 1rem;
     }
 
-    .ridd-site-branding-text-container{
-        align-self: baseline;
+    #ridd-site-branding a:focus-visible {
+      outline: var(--focus-outline);
+      transition: var(--focus-outline-transition);
     }
 
-  
+    #ridd-site-name {
+      font-size: 1em;
+    }
+
     #ridd-site-slogan {
-      display: block;
-    }
-  }
-
-  /*  Desktop */
-  @media screen and (min-width: 1024px) {
-    
-    #ridd-site-branding {
-      align-items: center;
+      display: none; /* hidden always in mobile */
+      font-size: 1em;
+      font-style: italic;
+      font-weight: 200;
     }
 
-    #ridd-site-name {
-        font-size: 2em;
+    #ridd-site-name:hover {
+      color: var(--color-primary-dark);
+      text-decoration: underline;
+    }
+
+
+    /* Tablet */
+    @media screen and (min-width: 768px) {
+
+      #ridd-site-branding {
+        gap: 1rem;
       }
 
-  }
-  
-  /*  Wide  */
-  @media screen and (min-width: 1440px)  {
+
+      #ridd-site-name {
+      font-size: 2em;
+      }
+
+      #ridd-site-logo {
+        max-height: 4rem;
+        max-width: 4rem;
+        min-height: 2rem;
+        min-width: 2rem;
+        margin-top: 0.5rem;
+      }
+
+      .ridd-site-branding-text-container{
+          align-self: baseline;
+      }
+
     
-    #ridd-site-name {
-        font-size: 2.5em;
+      #ridd-site-slogan {
+        display: block;
       }
+    }
+
+    /*  Desktop */
+    @media screen and (min-width: 1024px) {
+      
+      #ridd-site-branding {
+        align-items: center;
+      }
+
+      #ridd-site-name {
+          font-size: 2em;
+        }
+
+    }
+    
+    /*  Wide  */
+    @media screen and (min-width: 1440px)  {
+      
+      #ridd-site-name {
+          font-size: 2.5em;
+        }
+    
+    }
   
   }
-
 }
